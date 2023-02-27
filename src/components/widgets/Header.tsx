@@ -3,7 +3,6 @@ import { useContent } from "@builder.io/qwik-city";
 
 import Logo from "~/components/atoms/Logo";
 import ToggleTheme from "~/components/core/ToggleTheme";
-import ToggleMenu from "~/components/core/ToggleMenu";
 
 export default component$(() => {
   const store = useStore({
@@ -35,7 +34,7 @@ export default component$(() => {
           </a>
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6" />
-            <ToggleMenu iconClass="w-6 h-6" />
+            {/* <ToggleMenu iconClass="w-6 h-6" /> */}
           </div>
         </div>
         <div class="md:self-center flex items-center mb-4 md:mb-0 ml-4">
@@ -82,13 +81,6 @@ export default component$(() => {
 
           <div class="hidden items-center md:flex">
             <ToggleTheme iconClass="w-6 h-6" />
-            <a
-              href="https://github.com/onwidget/qwind"
-              aria-label="Qwind Github"
-              class="ml-3 btn btn-primary w-full h-10 px-5 shadow-none text-base"
-            >
-              Download
-            </a>
           </div>
         </div>
       </div>

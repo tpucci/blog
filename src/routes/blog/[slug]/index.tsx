@@ -22,13 +22,24 @@ export default component$(() => {
         <section class="mx-auto py-8 sm:py-16 lg:py-20">
           <article>
             <header class={post?.image ? "text-center" : ""}>
-              <p class="mx-auto max-w-3xl px-4 sm:px-6">
-                <time dateTime={post.publishDate}>{post.publishDate}</time>
-                {/* ~{" "} {Math.ceil(post.readingTime)} min read */}
+              <p class="mx-auto max-w-3xl px-4 sm:px-6 mb-2">
+                {post.tags.map((tag: string) => (
+                  <span class="uppercase text-xs px-1 py-0.5 mr-1 border rounded-sm text-gray-500 dark:text-slate-400 border-gray-500 dark:border-slate-400">
+                    {tag}
+                  </span>
+                ))}
               </p>
               <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
                 {post.title}
               </h1>
+
+              <p class="mx-auto max-w-3xl px-4 sm:px-6 text-md sm:text-lg flex-grow mb-8">
+                <span class="text-gray-500 dark:text-slate-400">
+                  <time dateTime={post.publishDate}>{post.publishDate}</time>
+                  {" - "}
+                </span>
+                {post.excerpt || post.description}
+              </p>
               {post.image ? (
                 <img
                   src={post.image}

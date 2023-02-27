@@ -1,4 +1,6 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStore, useTask$ } from "@builder.io/qwik";
+import { isServer } from "@builder.io/qwik/build";
+import { fetchPosts } from "~/utils/posts";
 
 // @ts-ignore
 import srcsetAvif from "~/assets/images/hero.jpg?w=400;900&avif&srcset";
@@ -8,58 +10,65 @@ import srcsetWebp from "~/assets/images/hero.jpg?w=400;900&webp&srcset";
 import { src as placeholder } from "~/assets/images/hero.jpg?width=400&metadata";
 
 export default component$(() => {
+  const store = useStore({
+    posts: [],
+  });
+
+  useTask$(async () => {
+    if (isServer) {
+      const posts = await fetchPosts();
+      store.posts = posts.map((post: any) => ({ ...post }));
+    }
+  });
+
   return (
     <section
-      class={`bg-gradient-to-b md:bg-gradient-to-r from-white via-purple-50 to-sky-100 dark:bg-none mt-[-72px]`}
+      class={`bg-gradient-to-b md:bg-gradient-to-r from-white via-purple-50 to-sky-100 dark:from-slate-900 dark:via-purple-900/10 dark:to-sky-900/20 mt-[-72px]`}
     >
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex md:h-screen 2xl:h-auto pt-[72px]">
-        <div class="py-12 md:py-12 lg:py-16 block md:flex text-center md:text-left">
-          <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex items-center basis-3/5">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 md:flex pt-[72px]">
+        <div class="py-12 md:py-12 lg:py-16 block md:flex">
+          <div class="pb-12 md:pb-0 md:py-0 mx-auto md:pr-16 flex basis-3/5">
             <div>
-              <h1 class="text-5xl md:text-[3.48rem] font-bold leading-tighter tracking-tighter mb-4 font-heading px-4 md:px-0">
-                Free template for <br class="hidden lg:block" />{" "}
-                <span class="hidden lg:inline">create a website using </span>{" "}
-                <span class="text-[#039de1]">Qwik</span> +{" "}
-                <span class="sm:whitespace-nowrap text-[#039de1]">
-                  Tailwind CSS
-                </span>
-              </h1>
               <div class="max-w-3xl mx-auto">
-                <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-                  <span class="font-semibold underline decoration-wavy decoration-1 decoration-secondary-600 underline-offset-2">
-                    Qwind
-                  </span>{" "}
-                  is a production ready template to start your new website using{" "}
-                  <em>Qwik</em> + <em>Tailwind CSS</em>. It has been designed
-                  following Best Practices, SEO, Accessibility,{" "}
-                  <span class="inline md:hidden">...</span>
-                  <span class="hidden md:inline">
-                    Dark Mode, Great Page Speed, image optimization, sitemap
-                    generation and more.
-                  </span>
-                </p>
-                <div class="max-w-xs sm:max-w-md flex flex-nowrap flex-col sm:flex-row gap-4 m-auto md:m-0 justify-center md:justify-start">
-                  <div class="flex w-full sm:w-auto">
-                    <a
-                      class="btn btn-primary sm:mb-0 w-full"
-                      href="https://github.com/onwidget/qwind"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      Get template
-                    </a>
-                  </div>
-                  <div class="flex w-full sm:w-auto">
-                    <button class="btn w-full bg-gray-50 dark:bg-transparent">
-                      Learn more
-                    </button>
-                  </div>
-                </div>
+                <ul>
+                  {store.posts.map((post: any) => (
+                    <li>
+                      <article class="max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8">
+                        <div>
+                          <header>
+                            {post.tags.map((tag: string) => (
+                              <span class="uppercase text-xs px-1 py-0.5 mr-1 border rounded-sm text-gray-500 dark:text-slate-400 border-gray-500 dark:border-slate-400">
+                                {tag}
+                              </span>
+                            ))}
+                            <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2 mt-1 font-heading">
+                              <a
+                                class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
+                                href={`/blog/${post.slug}`}
+                              >
+                                {post.title}
+                              </a>
+                            </h2>
+                          </header>
+                          <p class="text-md sm:text-lg flex-grow mb-8">
+                            <span class="text-gray-500 dark:text-slate-400">
+                              <time dateTime={post.publishDate}>
+                                {post.publishDate}
+                              </time>
+                              {" - "}
+                            </span>
+                            {post.excerpt || post.description}
+                          </p>
+                        </div>
+                      </article>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-          <div class="block md:flex items-center flex-1">
-            <div class="relative m-auto max-w-4xl">
+          <div class="hidden md:flex flex-1">
+            <div class="relative max-w-4xl">
               <picture>
                 <source srcSet={srcsetAvif} type="image/avif" />
                 <source srcSet={srcsetWebp} type="image/webp" />
@@ -67,8 +76,8 @@ export default component$(() => {
                   src={placeholder}
                   width={1000}
                   height={1250}
-                  class="mx-auto w-full rounded-md md:h-full drop-shadow-2xl bg-gray-400 dark:bg-slate-700"
-                  alt="Qwind Hero Image (Cool dog)"
+                  class="w-full rounded-md drop-shadow-2xl bg-gray-400 dark:bg-slate-700 object-contain"
+                  alt="Thomas Pucci"
                   loading="eager"
                   decoding="async"
                 />

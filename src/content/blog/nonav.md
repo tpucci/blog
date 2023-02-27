@@ -1,0 +1,21 @@
+---
+publishDate: Sep 30 2020
+title: NoNav for better mobile app navigation
+description: NoNav, our paradigm to make UX dynamic apps
+excerpt: In apps containing a lot of funnels and guided paths, it is not very usefull to let the user look for its content. Instead, we can use the data and sensors state and the date time to automatically navigate inside the app.
+tags:
+  - speaking
+---
+
+<figure class="w-full" markdown>
+  <div>
+    <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/SQn_7BOXkXs" allowfullscreen></iframe>
+  </div>
+  <figcaption markdown>
+
+Online Meetup @ [LPCx](https://www.meetup.com/FrenchProduit-Paris/)
+Conference @ [Paris OpenSource Summit](https://2019.opensourcesummit.paris)
+
+  </figcaption>
+</figure>
+
