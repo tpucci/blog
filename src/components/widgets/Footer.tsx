@@ -35,14 +35,14 @@ export default component$(() => {
       href: "https://twitter.com/Thomas_Pucci",
     },
     {
-      label: "LinkedIn",
-      icon: IconLinkedIn,
-      href: "https://www.linkedin.com/in/thomaspucci/",
-    },
-    {
       label: "Github",
       icon: IconGithub,
       href: "https://github.com/tpucci",
+    },
+    {
+      label: "LinkedIn",
+      icon: IconLinkedIn,
+      href: "https://www.linkedin.com/in/thomaspucci/",
     },
   ];
 
