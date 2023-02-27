@@ -65,6 +65,7 @@ export default component$(() => {
               LinkedIn.
             </div>
           </div>
+          <div class="hidden lg:block col-span-2" />
           {links.map(({ title, items }) => (
             <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">
