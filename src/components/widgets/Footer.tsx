@@ -9,7 +9,7 @@ export default component$(() => {
   const links = [
     {
       title: "Current Project",
-      items: [{ title: "Cadence", href: "https://github.com/tpucci/cadence" }],
+      items: [{ title: "Cadence", href: "https://cadence.page" }],
     },
     {
       title: "Goodies",
