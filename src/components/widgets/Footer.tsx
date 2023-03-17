@@ -58,11 +58,20 @@ export default component$(() => {
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               My name is Thomas.
-              <br />I am a french craftsman developer, speaker and lean
-              practitioner.
+              <br />I write and speak about architecture learnings, my first
+              product{" "}
+              <a
+                href="cadence.page"
+                class="dark:text-primary-300 text-primary-700 hover:underline"
+                target="_blank"
+              >
+                cadence.page
+              </a>
+              , and the indie maker journey.
+              <br /> ❄️ Ski lover and amateur chef 🍷
               <br />
-              This is my personal blog 🙂 Feel free to reach me on Twitter or
-              LinkedIn.
+              This is my personal blog 🙂 Feel free to reach me on Twitter (DM
+              open !) or LinkedIn.
             </div>
           </div>
           <div class="hidden lg:block col-span-2" />
@@ -78,6 +87,7 @@ export default component$(() => {
                       <Link
                         class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
                         href={href}
+                        target="_blank"
                       >
                         {title}
                       </Link>
