@@ -1,10 +1,9 @@
 export const SITE = {
   name: "Thomas Pucci",
 
-  title:
-    "Thomas Pucci's blog",
+  title: "Thomas Pucci's blog",
   description:
-    "Craftsman developer and Lean practitioner.",
+    "About architecture learnings, my first product cadence.page, and the indie maker journey ❄️ Ski lover and amateur chef 🍷.",
 
   origin: "https://thomaspucci.com",
   basePathname: "/",

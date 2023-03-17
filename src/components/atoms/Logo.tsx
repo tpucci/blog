@@ -16,7 +16,7 @@ export default component$(() => (
     <span>
       <span class="whitespace-nowrap mr-2">Thomas Pucci</span>{" "}
       <span class="text-gray-500 whitespace-nowrap dark:text-gray-500">
-        Craftsman Dev
+        Indie making in public ☃️
       </span>
     </span>
   </p>
