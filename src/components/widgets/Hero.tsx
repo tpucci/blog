@@ -17,7 +17,7 @@ export default component$(() => {
   useTask$(async () => {
     if (isServer) {
       const posts = await fetchPosts();
-      store.posts = posts.map((post: any) => ({ ...post }));
+      store.posts = posts.map((post: any) => ({ ...post })).reverse();
     }
   });
 
