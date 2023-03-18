@@ -50,8 +50,5 @@
   },
   "engines": {
     "node": ">=15.0.0"
-  },
-  "dependencies": {
-    "@vercel/analytics": "^0.1.11"
   }
 }

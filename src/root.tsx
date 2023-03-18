@@ -30,6 +30,9 @@ export default component$(() => {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+        {import.meta.env.PROD && (
+          <script defer src="/_vercel/insights/script.js"></script>
+        )}
         <RouterHead />
         <DarkThemeLauncher />
       </head>
