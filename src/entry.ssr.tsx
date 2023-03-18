@@ -12,7 +12,11 @@
  */
 import { renderToStream, RenderToStreamOptions } from "@builder.io/qwik/server";
 import { manifest } from "@qwik-client-manifest";
+import { inject } from "@vercel/analytics";
+
 import Root from "./root";
+
+inject();
 
 export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
