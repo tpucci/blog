@@ -4,7 +4,7 @@ title: Clean Archi with NestJS
 description: 3 Layers Architecture with Domain, Business, Infra
 excerpt: Every 4 years or so, in my personal experience, we partially or completely rewrite a badly architectured app. In order to avoid this, the "Clean Architecture" philosophy described by Uncle Bob comes to rescue us.
 tags:
-  - speaking
+  - speaking 🎙️
 ---
 
 <figure class="w-full" markdown>

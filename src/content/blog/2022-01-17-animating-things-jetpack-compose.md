@@ -4,7 +4,7 @@ title: Intro to Animating Things with Jetpack Compose
 description: Animations on Android
 excerpt: Animations are a great technique to significantly improve your UX. Discover how to get started with Animation on Android with Jetpack Compose !
 tags:
-  - speaking
+  - speaking 🎙️
 ---
 
 <figure class="w-full" markdown>

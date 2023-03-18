@@ -70,8 +70,23 @@ export default component$(() => {
               , and the indie maker journey.
               <br /> ❄️ Ski lover and amateur chef 🍷
               <br />
-              This is my personal blog 🙂 Feel free to reach me on Twitter (DM
-              open !) or LinkedIn.
+              This is my personal blog 🙂 Feel free to reach me on{" "}
+              <a
+                href="https://twitter.com/Thomas_Pucci"
+                class="text-gray-800 dark:text-gray-300 hover:underline"
+                target="_blank"
+              >
+                Twitter
+              </a>{" "}
+              (DM open !) or{" "}
+              <a
+                href="https://www.linkedin.com/in/thomaspucci/"
+                class="text-gray-800 dark:text-gray-300 hover:underline"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              .
             </div>
           </div>
           <div class="hidden lg:block col-span-2" />
