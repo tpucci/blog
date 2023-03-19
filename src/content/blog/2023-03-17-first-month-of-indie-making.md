@@ -18,7 +18,7 @@ Its little name is **"Cadence"**.
 ## 1st learning: build without mockups but good defaults
 
 It's the 3rd side project I have started and yet the only one still alive.
-I think it is because I don't spend so much time in Figma designing what I want it to be, and then stopping everything because I know all that design is going to cost a sh*tload of time 😅 Funny how my own mockups demotivates me.
+I think it is because I don't spend so much time in Figma designing what I want it to be, and then stopping everything because I know all that design is going to cost a sh\*tload of time 😅 Funny how my own mockups demotivates me.
 
 I've started to use tailwind CSS a couple of months and got it: I don't need a mockup. Let's go piece by piece and we'll see.
 
@@ -41,7 +41,6 @@ After some consideration, and seeing other products on the internet, I have deci
 
 🤩
 
-
 ## My main struggle: get an audience on Twitter
 
 I know I need to get out there and meet friends on the internet.
@@ -53,6 +52,7 @@ I hope I'll get results !
 ---
 
 ## Bonus ⭐️
+
 ## 4rth learning: Flutter is a great choice to avoid my product from being copied
 
 After trying to code my product in React, stop, and rewriting my product in Flutter for performance matters, I realized that I got a new big advantage on the web:

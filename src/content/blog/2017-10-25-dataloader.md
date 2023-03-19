@@ -18,4 +18,3 @@ TechLunch @ [Algolia](https://www.meetup.com/TechLunch/)
 
   </figcaption>
 </figure>
-
