@@ -1,19 +1,25 @@
+import { component$, useClientEffect$ } from "@builder.io/qwik";
 import { getCLS, getFCP, getFID, getLCP, getTTFB } from "web-vitals";
 
-export const VercelWebVitals = () => {
+export const VercelWebVitals = component$(() => {
   if (!import.meta.env.PROD) return null;
 
   const analyticsId = import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID;
-  if (analyticsId) {
-    webVitals({
-      path: location.pathname,
-      params: location.search,
-      analyticsId,
-    });
-  }
+  useClientEffect$(
+    () => {
+      if (analyticsId) {
+        webVitals({
+          path: location.pathname,
+          params: location.search,
+          analyticsId,
+        });
+      }
+    },
+    { eagerness: "load" }
+  );
 
   return null;
-};
+});
 
 const vitalsUrl = "https://vitals.vercel-analytics.com/v1/vitals";
 
@@ -64,7 +70,7 @@ function sendToAnalytics(metric: any, options: any) {
     });
 }
 
-function webVitals(options: any) {
+export function webVitals(options: any) {
   try {
     getFID((metric) => sendToAnalytics(metric, options));
     getTTFB((metric) => sendToAnalytics(metric, options));
