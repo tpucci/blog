@@ -11,6 +11,7 @@ import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
 
 import globalStyles from "~/assets/styles/global.css?inline";
 import { VercelAnalytics } from "./components/partytown/VercelAnalytics";
+import { VercelWebVitals } from "./components/utils/VercelWebVitals";
 
 export default component$(() => {
   /**
@@ -33,6 +34,7 @@ export default component$(() => {
           rel="stylesheet"
         />
         <VercelAnalytics />
+        <VercelWebVitals />
         <QwikPartytown />
         <RouterHead />
         <DarkThemeLauncher />
