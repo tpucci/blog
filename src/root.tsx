@@ -4,11 +4,13 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
+import { QwikPartytown } from "./components/partytown/Partytown";
 
 import { RouterHead } from "~/components/core/RouterHead";
 import { DarkThemeLauncher } from "~/components/core/DarkThemeLauncher";
 
 import globalStyles from "~/assets/styles/global.css?inline";
+import { VercelAnalytics } from "./components/partytown/VercelAnalytics";
 
 export default component$(() => {
   /**
@@ -30,9 +32,8 @@ export default component$(() => {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        {import.meta.env.PROD && (
-          <script defer src="/_vercel/insights/script.js"></script>
-        )}
+        <VercelAnalytics />
+        <QwikPartytown />
         <RouterHead />
         <DarkThemeLauncher />
       </head>

@@ -22,6 +22,7 @@
     "qwik": "qwik"
   },
   "devDependencies": {
+    "@builder.io/partytown": "^0.7.0",
     "@builder.io/qwik": "0.17.4",
     "@builder.io/qwik-city": "0.0.128",
     "@divriots/jampack": "^0.8.1",
