@@ -7,7 +7,6 @@ export const VercelWebVitals = component$(() => {
   const analyticsId = import.meta.env.VITE_VERCEL_ANALYTICS_ID;
   useClientEffect$(
     () => {
-      console.log(analyticsId);
       if (analyticsId) {
         webVitals({
           path: location.pathname,
