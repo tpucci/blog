@@ -4,9 +4,9 @@ import { getCLS, getFCP, getFID, getLCP, getTTFB } from "web-vitals";
 export const VercelWebVitals = component$(() => {
   if (!import.meta.env.PROD) return null;
 
+  const analyticsId = import.meta.env.VITE_VERCEL_ANALYTICS_ID;
   useClientEffect$(
     () => {
-      const analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
       console.log(analyticsId);
       if (analyticsId) {
         webVitals({
