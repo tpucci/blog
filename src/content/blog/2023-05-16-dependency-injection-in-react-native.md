@@ -1,8 +1,8 @@
 ---
 publishDate: May 16 2023
 title: Dependency injection in React Native
-description: A teaser about my next content
-excerpt: I have been selected to talk about dependency injection in a React Native context at the Mobilis in Mobile conference, here is the abstract.
+description: Replacing part of your application should be as easy as replacing a piece of a Lego construction.
+excerpt: I have been selected to talk about dependency injection in a React Native context at the Mobilis in Mobile conference, here is the abstract and the replay.
 tags:
   - speaking 🎙️
 ---
@@ -33,4 +33,15 @@ And that’s a wrap. Replacing/rewriting part of our app is now as easy as if we
 
 # Watch
 
-This talk will be given at the [Mobilis in Mobile](https://mobilis-in-mobile.io/#agenda) conference on June 20th 2023.
+This talk was first given on June 20th 2023 in french 🇫🇷 🥐.
+
+<figure class="w-full" markdown>
+  <div>
+    <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/Yl8mphsaSgY" allowfullscreen></iframe>
+  </div>
+  <figcaption markdown>
+
+Conference @ [Mobilis in Mobile](https://mobilis-in-mobile.io/#agenda)
+
+  </figcaption>
+</figure>
