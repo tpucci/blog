@@ -4,6 +4,6 @@
   "short_name": "Thomas Pucci's blog",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "About architecture learnings, my first product cadence.page, and the indie maker journey ❄️ Ski lover and amateur chef 🍷"
+  "background_color": "#0A180F",
+  "description": "About architecture learnings as a Founding/Staff Engineer ❄️ Ski lover and amateur chef 🍷"
 }

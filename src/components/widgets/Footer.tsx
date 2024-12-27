@@ -1,16 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
-import { IconTwitter } from "~/components/icons/IconTwitter";
+import { IconBluesky } from "~/components/icons/IconBluesky";
 import { IconGithub } from "~/components/icons/IconGithub";
 import { IconLinkedIn } from "../icons/IconLinkedIn";
 
 export default component$(() => {
   const links = [
-    {
-      title: "Current Project",
-      items: [{ title: "Cadence", href: "https://cadence.page" }],
-    },
+    {},
     {
       title: "Goodies",
       items: [
@@ -30,9 +27,9 @@ export default component$(() => {
 
   const social = [
     {
-      label: "Twitter",
-      icon: IconTwitter,
-      href: "https://twitter.com/Thomas_Pucci",
+      label: "Bluesky",
+      icon: IconBluesky,
+      href: "https://bsky.app/profile/thomaspucci.com",
     },
     {
       label: "Github",
@@ -58,27 +55,19 @@ export default component$(() => {
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               My name is Thomas.
-              <br />I write and speak about architecture learnings, my first
-              product{" "}
-              <a
-                href="cadence.page"
-                class="dark:text-primary-300 text-primary-700 hover:underline"
-                target="_blank"
-              >
-                cadence.page
-              </a>
-              , and the indie maker journey.
+              <br />I write and speak about architecture learnings, the indie
+              maker journey and staff engineering stuff.
               <br /> ❄️ Ski lover and amateur chef 🍷
               <br />
               This is my personal blog 🙂 Feel free to reach me on{" "}
               <a
-                href="https://twitter.com/Thomas_Pucci"
+                href="https://bsky.app/profile/thomaspucci.com"
                 class="text-gray-800 dark:text-gray-300 hover:underline"
                 target="_blank"
               >
-                Twitter
+                Bluesky
               </a>{" "}
-              (DM open !) or{" "}
+              or{" "}
               <a
                 href="https://www.linkedin.com/in/thomaspucci/"
                 class="text-gray-800 dark:text-gray-300 hover:underline"
