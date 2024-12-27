@@ -37,7 +37,7 @@ This talk was first given on June 20th 2023 in french 🇫🇷 🥐.
 
 <figure class="w-full" markdown>
   <div>
-    <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/Yl8mphsaSgY" allowfullscreen></iframe>
+    <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/tTjRVUZYanE" allowfullscreen></iframe>
   </div>
   <figcaption markdown>
 
